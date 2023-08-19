@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mvp_demo/pages/authentication/sign_up_page.dart';
-import 'package:mvp_demo/pages/welcome/widgets/auth_widgets/auth_appbar.dart';
-import 'package:mvp_demo/pages/welcome/widgets/auth_widgets/login_button.dart';
+import 'package:mvp_demo/pages/authentication/widgets/auth_appbar.dart';
+import 'package:mvp_demo/pages/authentication/widgets/auth_text_field.dart';
+import 'package:mvp_demo/pages/authentication/widgets/login_button.dart';
+import 'package:mvp_demo/pages/authentication/widgets/sign_in_with_icon.dart';
 
 import '../../controllers/expanded_container.dart';
-import '../welcome/widgets/auth_widgets/auth_text_field.dart';
-import '../welcome/widgets/auth_widgets/sign_in_with_icon.dart';
 import '../welcome/widgets/next_page_button.dart';
 
 class SignInPage extends StatelessWidget {

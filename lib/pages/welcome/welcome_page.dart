@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:mvp_demo/pages/home/writing_page.dart';
+import 'package:mvp_demo/pages/writing/writing_page.dart';
 import 'package:mvp_demo/pages/welcome/widgets/memo_box.dart';
 import 'package:mvp_demo/pages/welcome/widgets/next_page_button.dart';
 import 'package:mvp_demo/pages/welcome/widgets/paper_size.dart';
@@ -187,7 +187,9 @@ class WelcomePage extends StatelessWidget {
                                 duration: const Duration(milliseconds: 500),
                               );
                             },
-                            child: const PrimaryBox(),
+                            child: const PrimaryBox(
+                              title: "Click to\n   Edit",
+                            ),
                           ),
                         ),
                         Positioned(

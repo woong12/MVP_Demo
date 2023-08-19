@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../icon_action_button.dart';
+import '../../../common/widgets/icon_action_button.dart';
 
 class AuthAppBar extends StatelessWidget {
   final String appBarTitle;

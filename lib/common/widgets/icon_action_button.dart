@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import '../description_page.dart';
+import '../../pages/welcome/description_page.dart';
 
 class IconActionButton extends StatefulWidget {
   final IconData icon;

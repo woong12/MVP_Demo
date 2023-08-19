@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mvp_demo/common/widgets/icon_action_button.dart';
+import 'package:mvp_demo/pages/writing/widgets/writing_text_field.dart';
 
-class DescriptionPage extends StatefulWidget {
-  const DescriptionPage({super.key});
+import '../../common/widgets/icon_action_button.dart';
+
+class WritingPage extends StatefulWidget {
+  const WritingPage({super.key});
 
   @override
-  _DescriptionPageState createState() => _DescriptionPageState();
+  _WritingPageState createState() => _WritingPageState();
 }
 
-class _DescriptionPageState extends State<DescriptionPage>
+class _WritingPageState extends State<WritingPage>
     with SingleTickerProviderStateMixin {
   late AnimationController _animationController;
   late Animation<double> _scaleAnimation;
@@ -65,29 +67,21 @@ class _DescriptionPageState extends State<DescriptionPage>
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: [
-                          Text(
-                            "Hi !",
-                            style: TextStyle(
-                              fontSize: 32.sp,
-                              fontWeight: FontWeight.bold,
-                              color: const Color(0xFF202020),
-                            ),
+                      SizedBox(
+                        width: 400.w,
+                        child: const Material(
+                          color: Colors.transparent,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              WritingTextField(),
+                              IconActionButton(
+                                icon: Icons.check,
+                              ),
+                            ],
                           ),
-                          const IconActionButton(icon: Icons.check),
-                        ],
-                      ),
-                      SizedBox(height: 40.h),
-                      Text(
-                        "Description",
-                        style: TextStyle(
-                          fontSize: 20.sp,
-                          fontWeight: FontWeight.w500,
-                          color: const Color(0xFF202020),
                         ),
-                      )
+                      ),
                     ],
                   ),
                 ),
