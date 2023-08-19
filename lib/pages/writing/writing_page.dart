@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mvp_demo/pages/writing/widgets/writing_content.dart';
 import 'package:mvp_demo/pages/writing/widgets/writing_title_text.dart';
 
 import '../../common/widgets/icon_action_button.dart';
@@ -53,7 +54,6 @@ class _WritingPageState extends State<WritingPage>
             return Transform.scale(
               scale: _scaleAnimation.value,
               child: Container(
-                padding: const EdgeInsets.all(30),
                 width: 380.w,
                 height: 750.h,
                 decoration: const BoxDecoration(
@@ -67,14 +67,22 @@ class _WritingPageState extends State<WritingPage>
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      SizedBox(
+                      Container(
+                        padding: EdgeInsets.only(
+                          left: 30.w,
+                          top: 30.w,
+                          right: 30.w,
+                        ),
                         width: 400.w,
                         child: const Material(
                           color: Colors.transparent,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              WritingTitleText(),
+                              WritingTitleText(
+                                hintText: "Click to Edit",
+                                isTitle: true,
+                              ),
                               IconActionButton(
                                 icon: Icons.check,
                               ),
@@ -82,7 +90,15 @@ class _WritingPageState extends State<WritingPage>
                           ),
                         ),
                       ),
-                      const Text("here is detial")
+                      Expanded(
+                        child: SingleChildScrollView(
+                          child: Container(
+                            height: 650.h,
+                            padding: const EdgeInsets.all(20),
+                            child: const WritingContent(),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
