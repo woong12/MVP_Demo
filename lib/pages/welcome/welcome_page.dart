@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:mvp_demo/pages/writing/writing_page.dart';
 import 'package:mvp_demo/pages/welcome/widgets/memo_box.dart';
-import 'package:mvp_demo/pages/welcome/widgets/next_page_button.dart';
+import 'package:mvp_demo/common/widgets/next_page_button.dart';
 import 'package:mvp_demo/pages/welcome/widgets/paper_size.dart';
 import 'package:mvp_demo/pages/welcome/widgets/scroll_bar.dart';
 import 'package:mvp_demo/pages/welcome/widgets/template_box.dart';

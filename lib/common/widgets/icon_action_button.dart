@@ -13,7 +13,7 @@ class IconActionButton extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _IconActionButtonState createState() => _IconActionButtonState();
+  State<IconActionButton> createState() => _IconActionButtonState();
 }
 
 class _IconActionButtonState extends State<IconActionButton>

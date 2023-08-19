@@ -8,7 +8,7 @@ import 'package:mvp_demo/pages/authentication/widgets/login_button.dart';
 import 'package:mvp_demo/pages/authentication/widgets/sign_in_with_icon.dart';
 
 import '../../controllers/expanded_container.dart';
-import '../welcome/widgets/next_page_button.dart';
+import '../../common/widgets/next_page_button.dart';
 
 class SignInPage extends StatelessWidget {
   final ExpandedContainerController controller =
