@@ -24,7 +24,7 @@ class WelcomePage extends StatelessWidget {
           Padding(
             padding: EdgeInsets.only(top: 130.h),
             child: Text(
-              "OOOO",
+              "COLO",
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 30.sp,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mvp_demo/pages/writing/widgets/writing_text_field.dart';
+import 'package:mvp_demo/pages/writing/widgets/writing_title_text.dart';
 
 import '../../common/widgets/icon_action_button.dart';
 
@@ -74,7 +74,7 @@ class _WritingPageState extends State<WritingPage>
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              WritingTextField(),
+                              WritingTitleText(),
                               IconActionButton(
                                 icon: Icons.check,
                               ),
@@ -82,6 +82,7 @@ class _WritingPageState extends State<WritingPage>
                           ),
                         ),
                       ),
+                      const Text("here is detial")
                     ],
                   ),
                 ),

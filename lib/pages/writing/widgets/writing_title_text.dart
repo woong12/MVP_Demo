@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class WritingTextField extends StatelessWidget {
-  const WritingTextField({
+class WritingTitleText extends StatelessWidget {
+  const WritingTitleText({
     super.key,
   });
 
