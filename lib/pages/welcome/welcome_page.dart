@@ -182,7 +182,10 @@ class WelcomePage extends StatelessWidget {
                             ///
                             onTap: () {
                               Get.to(
-                                () => const WritingPage(),
+                                () => const WritingPage(
+                                  hintText: "Click to Edit",
+                                  isTitle: true,
+                                ),
                                 transition: Transition.fadeIn,
                                 duration: const Duration(milliseconds: 500),
                               );
