@@ -55,7 +55,7 @@ class _WritingContentState extends State<WritingContent> {
               ),
             ),
             hintStyle: TextStyle(
-              color: Colors.grey[350],
+              color: Colors.grey[400],
             ),
           ),
           style: TextStyle(

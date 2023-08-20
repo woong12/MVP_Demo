@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:mvp_demo/pages/writing/writing_page.dart';
 import 'package:mvp_demo/pages/welcome/widgets/memo_box.dart';
+import 'package:mvp_demo/pages/writing/writing_page.dart';
 import 'package:mvp_demo/common/widgets/next_page_button.dart';
 import 'package:mvp_demo/pages/welcome/widgets/paper_size.dart';
 import 'package:mvp_demo/pages/welcome/widgets/scroll_bar.dart';
 import 'package:mvp_demo/pages/welcome/widgets/template_box.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -85,32 +90,7 @@ class HomePage extends StatelessWidget {
                             backgroundColor: const Color(0xFFfff3da),
                           ),
                         ),
-                        Positioned(
-                          left: 170.w,
-                          bottom: 40.h,
-                          child: GestureDetector(
-                            onTap: () {
-                              Navigator.push(
-                                context,
-                                PageRouteBuilder(
-                                  pageBuilder: (context, animation,
-                                          secondaryAnimation) =>
-                                      const WritingPage(isTitle: false),
-                                  transitionsBuilder: (context, animation,
-                                      secondaryAnimation, child) {
-                                    return FadeTransition(
-                                      opacity: animation,
-                                      child: child,
-                                    );
-                                  },
-                                  transitionDuration:
-                                      const Duration(milliseconds: 500),
-                                ),
-                              );
-                            },
-                            child: const PrimaryBox(),
-                          ),
-                        ),
+                        const MemoBox(),
                       ],
                     ),
                   ),

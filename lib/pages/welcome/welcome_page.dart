@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:mvp_demo/pages/welcome/widgets/welcome_memo_box.dart';
 import 'package:mvp_demo/pages/writing/writing_page.dart';
-import 'package:mvp_demo/pages/welcome/widgets/memo_box.dart';
 import 'package:mvp_demo/common/widgets/next_page_button.dart';
 import 'package:mvp_demo/pages/welcome/widgets/paper_size.dart';
 import 'package:mvp_demo/pages/welcome/widgets/scroll_bar.dart';
@@ -78,14 +78,14 @@ class WelcomePage extends StatelessWidget {
                         Positioned(
                           left: 70.w,
                           bottom: 290.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             title: "Drag",
                           ),
                         ),
                         Positioned(
                           left: 200.w,
                           bottom: 250.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             isIcon: true,
                             icon: Icons.arrow_forward,
                           ),
@@ -93,7 +93,7 @@ class WelcomePage extends StatelessWidget {
                         Positioned(
                           left: 430.w,
                           bottom: 280.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             isIcon: true,
                             icon: Icons.arrow_forward,
                           ),
@@ -111,7 +111,7 @@ class WelcomePage extends StatelessWidget {
                         Positioned(
                           left: 150.w,
                           bottom: 40.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             isIcon: true,
                             icon: Icons.back_hand,
                           ),
@@ -119,7 +119,7 @@ class WelcomePage extends StatelessWidget {
                         Positioned(
                           left: 370.w,
                           bottom: 40.h,
-                          child: const PrimaryBox(),
+                          child: const WelcomMemoBox(),
                         ),
                         Positioned(
                           left: 650,
@@ -135,14 +135,14 @@ class WelcomePage extends StatelessWidget {
                         Positioned(
                           left: 690.w,
                           bottom: 80.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             title: "items",
                           ),
                         ),
                         Positioned(
                           left: 690.w,
                           bottom: 220.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             title: "apple",
                           ),
                         ),
@@ -169,7 +169,7 @@ class WelcomePage extends StatelessWidget {
                             },
                             child: const DefaultTextStyle(
                               style: TextStyle(color: Colors.black),
-                              child: PrimaryBox(
+                              child: WelcomMemoBox(
                                 title: "Hi !",
                               ),
                             ),
@@ -190,7 +190,7 @@ class WelcomePage extends StatelessWidget {
                                 duration: const Duration(milliseconds: 500),
                               );
                             },
-                            child: const PrimaryBox(
+                            child: const WelcomMemoBox(
                               title: "Click to\n   Edit",
                             ),
                           ),
@@ -198,14 +198,14 @@ class WelcomePage extends StatelessWidget {
                         Positioned(
                           left: 860.w,
                           bottom: 20.h,
-                          child: const PrimaryBox(
+                          child: const WelcomMemoBox(
                             title: "good",
                           ),
                         ),
                         Positioned(
                           left: 1080.w,
                           bottom: 20.h,
-                          child: const PrimaryBox(),
+                          child: const WelcomMemoBox(),
                         ),
                       ],
                     ),
