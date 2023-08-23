@@ -15,6 +15,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Offset boxPosition = const Offset(300, 250);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -90,7 +92,19 @@ class _HomePageState extends State<HomePage> {
                             backgroundColor: const Color(0xFFfff3da),
                           ),
                         ),
-                        const MemoBox(),
+                        Positioned(
+                          left: boxPosition.dx,
+                          top: boxPosition.dy,
+                          child: Draggable(
+                            feedback: const MemoBox(),
+                            onDraggableCanceled: (velocity, offset) {
+                              setState(() {
+                                boxPosition = offset;
+                              });
+                            },
+                            child: const MemoBox(),
+                          ),
+                        ),
                       ],
                     ),
                   ),
