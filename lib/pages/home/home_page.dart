@@ -5,7 +5,6 @@ import 'package:mvp_demo/pages/writing/writing_page.dart';
 import 'package:mvp_demo/common/widgets/next_page_button.dart';
 import 'package:mvp_demo/pages/welcome/widgets/paper_size.dart';
 import 'package:mvp_demo/pages/welcome/widgets/scroll_bar.dart';
-import 'package:mvp_demo/pages/welcome/widgets/template_box.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -82,16 +81,16 @@ class _HomePageState extends State<HomePage> {
                     height: 500.h,
                     child: Stack(
                       children: [
-                        Positioned(
-                          left: 0,
-                          top: 0,
-                          child: TemplateBox(
-                            width: 340.w,
-                            height: 230.h,
-                            templateTitle: "welcome",
-                            backgroundColor: const Color(0xFFfff3da),
-                          ),
-                        ),
+                        // Positioned(
+                        //   left: 0,
+                        //   top: 0,
+                        //   child: TemplateBox(
+                        //     width: 340.w,
+                        //     height: 230.h,
+                        //     templateTitle: "welcome",
+                        //     backgroundColor: const Color(0xFFfff3da),
+                        //   ),
+                        // ),
                         Positioned(
                           left: boxPosition.dx,
                           top: boxPosition.dy,
