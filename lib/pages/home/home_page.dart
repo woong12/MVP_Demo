@@ -6,6 +6,8 @@ import 'package:mvp_demo/common/widgets/next_page_button.dart';
 import 'package:mvp_demo/pages/welcome/widgets/paper_size.dart';
 import 'package:mvp_demo/pages/welcome/widgets/scroll_bar.dart';
 
+import '../welcome/widgets/template_box.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -79,46 +81,47 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.all(20),
                     width: 1290.w,
                     height: 500.h,
-                    child: GridView.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 10, // Number of columns in the grid
-                        mainAxisSpacing: 20, // Spacing between rows
-                        crossAxisSpacing: 20, // Spacing between columns
-                      ),
-                      itemCount:
-                          30, // Number of MemoBox widgets you want to display
-                      itemBuilder: (context, index) {
-                        return const MemoBox();
-                      },
+                    child:
+                        //  GridView.builder(
+                        //   gridDelegate:
+                        //       const SliverGridDelegateWithFixedCrossAxisCount(
+                        //     crossAxisCount: 10, // Number of columns in the grid
+                        //     mainAxisSpacing: 20, // Spacing between rows
+                        //     crossAxisSpacing: 20, // Spacing between columns
+                        //   ),
+                        //   itemCount:
+                        //       30, // Number of MemoBox widgets you want to display
+                        //   itemBuilder: (context, index) {
+                        //     return const MemoBox();
+                        //   },
+                        // ),
+                        Stack(
+                      children: [
+                        Positioned(
+                          left: 0,
+                          top: 0,
+                          child: TemplateBox(
+                            width: 340.w,
+                            height: 230.h,
+                            templateTitle: "work",
+                            backgroundColor: const Color(0xFFfff3da),
+                          ),
+                        ),
+                        Positioned(
+                          left: boxPosition.dx,
+                          top: boxPosition.dy,
+                          child: Draggable(
+                            feedback: const MemoBox(),
+                            onDraggableCanceled: (velocity, offset) {
+                              setState(() {
+                                boxPosition = offset;
+                              });
+                            },
+                            child: const MemoBox(),
+                          ),
+                        ),
+                      ],
                     ),
-                    // Stack(
-                    //   children: [
-                    //     // Positioned(
-                    //     //   left: 0,
-                    //     //   top: 0,
-                    //     //   child: TemplateBox(
-                    //     //     width: 340.w,
-                    //     //     height: 230.h,
-                    //     //     templateTitle: "welcome",
-                    //     //     backgroundColor: const Color(0xFFfff3da),
-                    //     //   ),
-                    //     // ),
-                    //     Positioned(
-                    //       left: boxPosition.dx,
-                    //       top: boxPosition.dy,
-                    //       child: Draggable(
-                    //         feedback: const MemoBox(),
-                    //         onDraggableCanceled: (velocity, offset) {
-                    //           setState(() {
-                    //             boxPosition = offset;
-                    //           });
-                    //         },
-                    //         child: const MemoBox(),
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
                   ),
                   const ScrollBar(),
                 ],
